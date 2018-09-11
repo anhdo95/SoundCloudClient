@@ -7,7 +7,6 @@ import Stream from "./presenter";
 function mapStateToProps(state) {
   const { user } = state.auth;
   const { tracks, activeTrack } = state.track;
-  debugger;
   return {
     user,
     tracks,
