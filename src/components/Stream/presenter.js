@@ -1,6 +1,7 @@
 import React from "react";
 
-function Stream({ user, tracks = [], onAuth }) {
+function Stream({ user, tracks = [], onAuth, onPlay }) {
+  debugger;
   return (
     <div>
       <div>
@@ -17,6 +18,7 @@ function Stream({ user, tracks = [], onAuth }) {
           return (
             <div className="track" key={key}>
               {track.origin.title}
+              <button type="button" onClick={() => onPlay(track)}>Play</button>
             </div>
           );
         })}
