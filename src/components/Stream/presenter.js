@@ -1,12 +1,15 @@
 import React from "react";
 
-function Stream({ tracks = [], onAuth }) {
+function Stream({ user, tracks = [], onAuth }) {
   return (
     <div>
       <div>
-        <button onClick={onAuth} type="button">
+        {user
+          ? <div>{user.username}</div>
+          : <button onClick={onAuth} type="button">
           Login
         </button>
+        }
       </div>
       <br />
       <div>
